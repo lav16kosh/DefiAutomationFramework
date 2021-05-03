@@ -1,8 +1,8 @@
 {
-  "reporter": "junit",
+  "reporter": "mocha-junit-reporter",
     "reporterOptions": {
-        "mochaFile": "results/my-test-output[hash].xml",
-        "toConsole": true
+        "mochaFile": "cypress/reports/junit/test-results.[hash].xml",
+         "testsuitesTitle": false
     },
     "env": {
         "url": "https://www.toyotabharat.com/feedback/"
