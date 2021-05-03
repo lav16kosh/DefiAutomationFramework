@@ -20,12 +20,12 @@ steps:
     npm install
   displayName: 'npm install'
 
-- task: CmdLine@2
-  displayName: Run-Tests
-  continueOnError: true
+- task: Npm@1
+  displayName: 'run tests'
   inputs:
-    workingDirectory: $(System.DefaultWorkingDirectory)
-    script: npm run test
+    command: 'custom'
+    workingDir: '.'
+    customCommand: 'run test'
     
 - task: PublishTestResults@2
   inputs:
