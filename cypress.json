@@ -1,0 +1,13 @@
+{
+  "reporter": "junit",
+    "reporterOptions": {
+        "mochaFile": "results/my-test-output[hash].xml",
+        "toConsole": true
+    },
+    "env": {
+        "url": "https://www.toyotabharat.com/feedback/"
+    },
+    "retries": {
+        "runMode" : 1
+    }
+}

@@ -1,0 +1,122 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-05-02T11:18:20.965Z",
+    "end": "2021-05-02T11:18:38.626Z",
+    "duration": 17661,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ff421a03-3172-44c0-a742-1a7b57e51465",
+      "title": "",
+      "fullFile": "cypress/integration/examples/SubmitFeedback.js",
+      "file": "cypress/integration/examples/SubmitFeedback.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "361f3af5-98bc-4b8c-8aff-accb74735ca4",
+          "title": "Admin Portal",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Submit Feedback",
+              "fullTitle": "Admin Portal Submit Feedback",
+              "timedOut": null,
+              "duration": 7604,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const feedbackPage = new _FeedbackPage.default();\ncy.visit(Cypress.env('url'));\nfeedbackPage.getName().type(globalThis.data.name);\nfeedbackPage.getAddress1().type(globalThis.data.address1);\nfeedbackPage.getAddress2().type(globalThis.data.address2);\nfeedbackPage.getAddress3().type(globalThis.data.address3);\nfeedbackPage.getPhone().type(globalThis.data.mobileno);\nfeedbackPage.getEmail().type(globalThis.data.email);\nfeedbackPage.getGrievance().type(globalThis.data.grievance);\nfeedbackPage.getPostalCode().type(globalThis.data.pincode);",
+              "err": {},
+              "uuid": "8d41d337-c6b3-41f5-bf1c-22503a4d7d5e",
+              "parentUUID": "361f3af5-98bc-4b8c-8aff-accb74735ca4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Multiple data sets",
+              "fullTitle": "Admin Portal Multiple data sets",
+              "timedOut": null,
+              "duration": 7905,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(6000);\nglobalThis.data.postalcode.forEach(function (code) {\n  cy.get(\"#txtPinCode\").clear();\n  cy.get(\"#txtPinCode\").clear().type(code);\n});",
+              "err": {},
+              "uuid": "976a5ef4-30ea-456c-9ae9-e8d6c2daa429",
+              "parentUUID": "361f3af5-98bc-4b8c-8aff-accb74735ca4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8d41d337-c6b3-41f5-bf1c-22503a4d7d5e",
+            "976a5ef4-30ea-456c-9ae9-e8d6c2daa429"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 15509,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "mochaFile": "results/my-test-output.xml",
+        "toConsole": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
